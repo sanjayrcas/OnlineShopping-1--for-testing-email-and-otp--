@@ -24,7 +24,7 @@ export default function Signup() {
     }
 
     try {
-        await axios.post("http://localhost:5000/api/auth/signup", {
+        await axios.post("https://onlineshopping-1-for-testing-email-and.onrender.com/api/auth/signup", {
         fName,
         lName,
         email,
@@ -46,7 +46,7 @@ export default function Signup() {
     const requestOtp = async (e) => {
         e.preventDefault();
         try {
-            await axios.post("http://localhost:5000/api/otp/send-otp", { email });
+            await axios.post("https://onlineshopping-1-for-testing-email-and.onrender.com/api/otp/send-otp", { email });
             alert("OTP sent to your email");
             setOtpSent(true);
         } catch (err) {

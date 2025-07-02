@@ -15,7 +15,7 @@ const SingleProductView = () => {
     productsOriginalPrice: '',
   })
   useEffect(() => {
-    fetch(`http://localhost:5000/api/products/getProductById/${id}`)
+    fetch(`https://onlineshopping-1-for-testing-email-and.onrender.com/api/products/getProductById/${id}`)
       .then((res) => res.json())
       .then((data) => setItem(data));
   })

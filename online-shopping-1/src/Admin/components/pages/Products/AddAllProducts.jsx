@@ -13,7 +13,7 @@ export default function AddAllProducts() {
     const itemsPerPage = 5;
 
     useEffect(()=>{
-            fetch('http://localhost:5000/api/products/getAllProducts')
+            fetch('https://onlineshopping-1-for-testing-email-and.onrender.com/api/products/getAllProducts')
             .then((res)=> res.json())
             .then((data)=>{
                 setProductData(data)
@@ -22,7 +22,7 @@ export default function AddAllProducts() {
 
     // delete products by id.
     const handleDelete=(id)=>{
-        fetch(`http://localhost:5000/api/products/deleteProduct/${id}`,{
+        fetch(`https://onlineshopping-1-for-testing-email-and.onrender.com/api/products/deleteProduct/${id}`,{
             method: 'DELETE'
         })
         .then((res)=>res.json())
