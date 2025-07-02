@@ -57,7 +57,8 @@ export default function Signup() {
         const verifyOtp = async (e) => {
         e.preventDefault();
         try {
-            await axios.post("http://localhost:5000/api/otp/verify-otp", { email, otp });
+            // await axios.post("http://localhost:5000/api/otp/verify-otp", { email, otp });
+            await axios.post("http://onlineshopping-1-mernstack-sanjay.netlify.app/api/otp/verify-otp", { email, otp });
             alert("OTP verified successfully");
             setIsVerified(true);
         } catch (err) {
