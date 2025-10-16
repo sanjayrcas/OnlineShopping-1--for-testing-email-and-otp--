@@ -237,6 +237,7 @@ export default function ShowAllProducts() {
         const fetchProducts = async () => {
             try {
                 const response = await fetch('https://onlineshopping-1-for-testing-email-and.onrender.com/api/products/getAllProducts');
+                // const response = await fetch('http://localhost:5000/api/products/getAllProducts');
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }

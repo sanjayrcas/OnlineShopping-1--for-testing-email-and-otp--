@@ -13,6 +13,7 @@ export default function UpdateProduct() {
 
     useEffect(()=>{
         fetch(`https://onlineshopping-1-for-testing-email-and.onrender.com/api/products/getProductById/${id}`)
+        // fetch(`http://localhost:5000/api/products/getProductById/${id}`)
         .then((res)=> res.json())
         .then((data)=> setUpdateProductData(data))
     });
@@ -33,6 +34,7 @@ export default function UpdateProduct() {
         };
 
         fetch(`https://onlineshopping-1-for-testing-email-and.onrender.com/api/products/updateProduct/${id}`,{
+        // fetch(`http://localhost:5000/api/products/updateProduct/${id}`,{
             method: 'PATCH',
             headers: {
                 'Content-type':'Application/json'

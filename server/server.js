@@ -12,7 +12,8 @@ const port = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-  origin: 'https://onlineshopping-1-mernstack-sanjay.netlify.app'
+    // origin: 'http://localhost:3000'
+    origin: 'https://onlineshopping-1-mernstack-sanjay.netlify.app'
 }));
 
 app.use(express.json()); // allows us to parse incoming requests: req.body

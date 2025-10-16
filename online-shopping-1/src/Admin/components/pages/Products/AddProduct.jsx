@@ -32,6 +32,7 @@ export default function AddProduct() {
 
         // fetch('http://localhost:5000/addProduct', {
         fetch('https://onlineshopping-1-for-testing-email-and.onrender.com/api/products/addProduct', {
+        // fetch('http://localhost:5000/api/products/addProduct', {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json'
