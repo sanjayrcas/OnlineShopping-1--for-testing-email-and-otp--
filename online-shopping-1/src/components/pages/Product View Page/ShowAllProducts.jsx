@@ -217,6 +217,7 @@ export default function ShowAllProducts() {
 
     const [productData, setProductData] = useState([]);
     const [filteredData, setFilteredData] = useState([]);
+    const API_BASE_URL = process.env.REACT_APP_API_URL;
 
     const [filters, setFilters] = useState({
         name: '',
@@ -236,7 +237,7 @@ export default function ShowAllProducts() {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await fetch('https://onlineshopping-1-for-testing-email-and.onrender.com/api/products/getAllProducts');
+                const response = await fetch(`${API_BASE_URL}/api/products/getAllProducts`);
                 // const response = await fetch('http://localhost:5000/api/products/getAllProducts');
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);

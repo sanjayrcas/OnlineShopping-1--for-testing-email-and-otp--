@@ -15,6 +15,7 @@ export default function AddProduct() {
         const productsDescription = form.productsDescription.value;
         const productsStatus = form.productsStatus.value;
         const productQuantity = form.productQuantity.value;
+        const API_BASE_URL = process.env.REACT_APP_API_URL;
 
         // if(productsImg === '' || productsName === '' || productsCategory === '' || productsOriginalPrice === '' || productsDescription === '' || productsStatus === '' || productQuantity === ''){
         //     alert("Fill all the Details")
@@ -31,8 +32,8 @@ export default function AddProduct() {
         };
 
         // fetch('http://localhost:5000/addProduct', {
-        fetch('https://onlineshopping-1-for-testing-email-and.onrender.com/api/products/addProduct', {
-        // fetch('http://localhost:5000/api/products/addProduct', {
+        fetch(`${API_BASE_URL}/api/products/addProduct`)
+        fetch('http://localhost:5000/api/products/addProduct', {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json'
