@@ -7,7 +7,7 @@ import axios from 'axios';
 
 export default function Signup() {
 
-        // LOGIN AND SIGN IN WITH OTP WAS WORKING CORRECTLY
+// LOGIN AND SIGN IN WITH OTP WAS WORKING CORRECTLY
 
     const [fName, setFName] = useState("");
     const [lName, setLName] = useState("");
@@ -61,8 +61,6 @@ export default function Signup() {
         const verifyOtp = async (e) => {
         e.preventDefault();
         try {
-            // await axios.post("http://localhost:5000/api/otp/verify-otp", { email, otp });
-            
             await axios.post("https://onlineshopping-1-for-testing-email-and.onrender.com/api/otp/verify-otp", { email, otp });
             // await axios.post("http://localhost:5000/api/otp/verify-otp", { email, otp });
             alert("OTP verified successfully");
