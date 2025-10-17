@@ -32,8 +32,8 @@ export default function AddProduct() {
         };
 
         // fetch('http://localhost:5000/addProduct', {
-        fetch(`${API_BASE_URL}/api/products/addProduct`)
-        fetch('http://localhost:5000/api/products/addProduct', {
+        fetch(`${API_BASE_URL}/api/products/addProduct`, {
+        // fetch('http://localhost:5000/api/products/addProduct', {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json'

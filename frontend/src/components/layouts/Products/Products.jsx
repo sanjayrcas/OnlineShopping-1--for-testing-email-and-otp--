@@ -69,7 +69,7 @@ export default function Products() {
             }
         };
         fetchProducts();
-    }, []);
+    }, [API_BASE_URL]);
 
     const searchItems = productData.map(item => (
         <div key={item._id} className="col-12 col-xl-3 col-lg-4 col-md-4 col-sm-6 border-0 bg-transparent product-col card p-0 mb-2">
