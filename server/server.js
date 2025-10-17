@@ -12,7 +12,8 @@ const port = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-    origin: 'http://localhost:3000'
+    // origin: ['http://localhost:3000']
+    origin: ['https://online-shopping-1for-email-otp.netlify.app']
 }));
 
 app.use(express.json()); // allows us to parse incoming requests: req.body
