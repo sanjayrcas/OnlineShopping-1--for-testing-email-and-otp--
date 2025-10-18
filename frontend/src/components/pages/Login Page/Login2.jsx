@@ -28,7 +28,7 @@ export default function Login2() {
       localStorage.setItem("userRole", user.role);
       localStorage.setItem("userEmail", user.email);
  
-      if (user.email === "sanjay46512002@gmail.com") {
+      if (user.email === "sanjaygrcas@gmail.com") {
       navigate("/admin-dashboard");
       } else {
         navigate("/user-dashboard");
